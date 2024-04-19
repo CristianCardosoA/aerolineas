@@ -14,6 +14,12 @@
 		D317A9572BD228E600C04D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D317A9562BD228E600C04D71 /* Assets.xcassets */; };
 		D317A95A2BD228E600C04D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D317A9582BD228E600C04D71 /* LaunchScreen.storyboard */; };
 		D317A9622BD228FB00C04D71 /* MiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A9612BD228FB00C04D71 /* MiCollectionViewCell.swift */; };
+		D317A9642BD2391400C04D71 /* Avion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A9632BD2391400C04D71 /* Avion.swift */; };
+		D317A9662BD239B900C04D71 /* Direccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A9652BD239B900C04D71 /* Direccion.swift */; };
+		D317A9682BD23C2700C04D71 /* Planificador.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A9672BD23C2700C04D71 /* Planificador.swift */; };
+		D317A96A2BD23DE400C04D71 /* Plano.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A9692BD23DE400C04D71 /* Plano.swift */; };
+		D317A96E2BD248BA00C04D71 /* Aeromexico.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A96D2BD248BA00C04D71 /* Aeromexico.swift */; };
+		D317A9702BD2498800C04D71 /* AmericanAirlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317A96F2BD2498800C04D71 /* AmericanAirlines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		D317A9592BD228E600C04D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D317A95B2BD228E600C04D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D317A9612BD228FB00C04D71 /* MiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiCollectionViewCell.swift; sourceTree = "<group>"; };
+		D317A9632BD2391400C04D71 /* Avion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avion.swift; sourceTree = "<group>"; };
+		D317A9652BD239B900C04D71 /* Direccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direccion.swift; sourceTree = "<group>"; };
+		D317A9672BD23C2700C04D71 /* Planificador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planificador.swift; sourceTree = "<group>"; };
+		D317A9692BD23DE400C04D71 /* Plano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plano.swift; sourceTree = "<group>"; };
+		D317A96D2BD248BA00C04D71 /* Aeromexico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aeromexico.swift; sourceTree = "<group>"; };
+		D317A96F2BD2498800C04D71 /* AmericanAirlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmericanAirlines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,12 @@
 				D317A9582BD228E600C04D71 /* LaunchScreen.storyboard */,
 				D317A95B2BD228E600C04D71 /* Info.plist */,
 				D317A9612BD228FB00C04D71 /* MiCollectionViewCell.swift */,
+				D317A9632BD2391400C04D71 /* Avion.swift */,
+				D317A9652BD239B900C04D71 /* Direccion.swift */,
+				D317A9672BD23C2700C04D71 /* Planificador.swift */,
+				D317A9692BD23DE400C04D71 /* Plano.swift */,
+				D317A96D2BD248BA00C04D71 /* Aeromexico.swift */,
+				D317A96F2BD2498800C04D71 /* AmericanAirlines.swift */,
 			);
 			path = Colleciones;
 			sourceTree = "<group>";
@@ -141,9 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D317A96A2BD23DE400C04D71 /* Plano.swift in Sources */,
+				D317A9662BD239B900C04D71 /* Direccion.swift in Sources */,
+				D317A96E2BD248BA00C04D71 /* Aeromexico.swift in Sources */,
 				D317A9522BD228E400C04D71 /* ViewController.swift in Sources */,
+				D317A9682BD23C2700C04D71 /* Planificador.swift in Sources */,
 				D317A94E2BD228E400C04D71 /* AppDelegate.swift in Sources */,
+				D317A9702BD2498800C04D71 /* AmericanAirlines.swift in Sources */,
 				D317A9622BD228FB00C04D71 /* MiCollectionViewCell.swift in Sources */,
+				D317A9642BD2391400C04D71 /* Avion.swift in Sources */,
 				D317A9502BD228E400C04D71 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

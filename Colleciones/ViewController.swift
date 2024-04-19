@@ -8,38 +8,52 @@
 import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var collection: UICollectionView!
+    
     let reuseIdentifier = "miCelda"
-
-// Nota: el identificador debe ser ingresado en el storyboard, en el apartado de “Identificador”
-
-    var items = [String]()
+    // Seleccionar la planificacion de ruta de la aerolinea de su preferencia
     
-    override func viewDidLoad() {
-        for i in 1...100 {
-            items.append("\(i)")
-        }
-    }
+    var planificador = Planificador(aviones: Aeromexico.aviones)
+    //var planificador = Planificador(aviones: AmericanAirlines.aviones)
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
-    }
-
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: reuseIdentifier,
+            for: indexPath as IndexPath
+        ) as! MiCollectionViewCell
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MiCollectionViewCell
-        
-        cell.titulo.text = self.items[indexPath.row]
-        cell.backgroundColor = UIColor.cyan
+        if let avion = planificador.plano.getAvion(row: indexPath.row, section: indexPath.section) {
+            cell.direccion(avion: avion)
+        } else {
+            cell.none()
+        }
+        cell.style()
         return cell
     }
-
-    // MARK: - UICollectionViewDelegate protocol
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
-        print("Seleccionaste la celda #\(indexPath.item)!")
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return planificador.plano.columnas
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return planificador.plano.filas
+    }
+    
+    @IBAction func tapBack(_ sender: Any) {
+        planificador.back()
+        collection.reloadData()
+    }
+    
+    @IBAction func tapNext(_ sender: Any) {
+        planificador.next()
+        collection.reloadData()
     }
 }
 
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = collectionView.frame.size.width / CGFloat(planificador.plano.columnas)
+        return CGSize(width: size, height: size)
+    }
+}
